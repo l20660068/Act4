@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de dos números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('purpura.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function sumar() {
+            // Captura los valores de las variables "churpia1" y "churpia2"
+            var churpia1 = parseFloat(document.getElementById('churpia1').value);
+            var churpia2 = parseFloat(document.getElementById('churpia2').value);
+
+            // Realiza la suma y asigna el resultado a "caquita"
+            var caquita = churpia1 + churpia2;
+
+            // Muestra el resultado en el párrafo con id "resultado"
+            document.getElementById('resultado').innerHTML = "El resultado es: " + caquita;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Suma de dos Números</h1>
+
+        <!-- Formulario para ingresar los números -->
+        <label for="churpia1">Número 1:</label><br>
+        <input type="number" id="churpia1" name="churpia1"><br>
+
+        <label for="churpia2">Número 2:</label><br>
+        <input type="number" id="churpia2" name="churpia2"><br>
+
+        <!-- Botón para realizar la suma -->
+        <button onclick="sumar()">Sumar</button>
+
+        <!-- Espacio donde se mostrará el resultado -->
+        <p id="resultado"></p>
+    </div>
+
+</body>
+</html>
